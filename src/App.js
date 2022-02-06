@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
 import MyCard from './components/test/test';
-import { Card, Button, Form, Container, Grid } from "tabler-react";
+import { Media, Card, Button, Form, Container, Grid } from "tabler-react";
 import ScrollLock, { TouchScrollable } from 'react-scrolllock';
 
 import TopNav from './components/1TopNav/TopNav';
@@ -11,11 +11,11 @@ import AccountStatus from './components/4AccountStatus/AccountStatus';
 import TokenStats from './components/5TokenStats/TokenStats';
 import Referral from './components/6Referral/Referral';
 import TreasuryStatus from './components/7TreasuryStatus/TreasuryStatus';
+import Roadmap from './components/8Roadmap/Roadmap';
 
 function App() {
   return (
     <div className="App">
-
       <Grid.Row cards deck> 
 
         <Grid.Col>
@@ -42,6 +42,10 @@ function App() {
 
           <Container>
             <TreasuryStatus/>
+          </Container>
+
+          <Container>
+            <Roadmap/>
           </Container>
           
           </Grid.Col>

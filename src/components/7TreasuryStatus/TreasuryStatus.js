@@ -50,6 +50,7 @@ class TreasuryStatus extends Component {
       <SocialNetworksList
         itemsObjects={[
           { name: "telegramann", label: "Telegram Announcements",  color: "blue", to: "http://www.twitter.com" },
+          { name: "telegramgroup", label: "Telegram Group",  color: "blue", to: "http://www.twitter.com" },
         ]}
         prefix="fa"
         asButtons

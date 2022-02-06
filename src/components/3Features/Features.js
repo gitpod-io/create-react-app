@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
 import "tabler-react/dist/Tabler.css";
+import logo from './logosmall.png';
+import roilogo from './siscoinsmall.png';
 
 import { Card, Button, Form, Container, Grid } from "tabler-react";
 
@@ -14,8 +16,9 @@ class Features extends Component {
           <Card>
             <Container>
               <Card.Header>
-                <Card.Title color = "#0000FF">STABLE INCOME SYSTEM FEATURES</Card.Title>
+                <Card.Title color = "#0000FF">STABLE INCOME SYSTEM FEATURES <img src={logo}/></Card.Title>
               </Card.Header>
+                
               <Card.Body>
                 Daily 10% returns
               </Card.Body>
@@ -32,8 +35,9 @@ class Features extends Component {
           <Card>
             <Container>
               <Card.Header>
-                <Card.Title color = "#0000FF" d = "flex">ROI TOKEN FEATURES</Card.Title>
+                <Card.Title color = "#0000FF" d = "flex">ROI TOKEN FEATURES <img src={roilogo}/></Card.Title>
               </Card.Header>
+                
               <Card.Body>
                 Earn ROI Tokens on every investment in Stable Income System
               </Card.Body>
