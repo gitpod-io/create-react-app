@@ -7,7 +7,7 @@ import { Card, Button, Form, Container, Grid, Table } from "tabler-react";
 class Referral extends Component {
   render() {
     return (
-      <Container>
+      <>
 <Grid.Row cards deck> 
 
 <Grid.Col>
@@ -72,7 +72,7 @@ class Referral extends Component {
 
       </Grid.Row>
 
-      </Container>
+      </>
     );
   }
 }

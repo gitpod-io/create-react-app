@@ -7,7 +7,7 @@ import { Card, Button, Form, Container, Grid } from "tabler-react";
 class Features extends Component {
   render() {
     return (
-      <Container>
+      <>
       <Grid.Row cards deck> 
 
         <Grid.Col>
@@ -32,16 +32,25 @@ class Features extends Component {
           <Card>
             <Container>
               <Card.Header>
-                <Card.Title color = "#0000FF">ROI TOKEN FEATURES</Card.Title>
+                <Card.Title color = "#0000FF" d = "flex">ROI TOKEN FEATURES</Card.Title>
               </Card.Header>
               <Card.Body>
-                Earn ROI Tokens on every investment
+                Earn ROI Tokens on every investment in Stable Income System
               </Card.Body>
               <Card.Body>
-                Daily 30% Auto-reinvestment
+                Deflationary token that burns 3% ROI tokens on its each transaction
               </Card.Body>
               <Card.Body>
-                33% reinvestment on withdraw
+                Automatically rewards holders with 1% tokens on its each transaction
+              </Card.Body>
+              <Card.Body>
+                It is the primary token of Stable Income System
+              </Card.Body>
+              <Card.Body>
+                Minting will stop once its Total Supply is reached
+              </Card.Body>
+              <Card.Body>
+                Holders will be able to claim all future airdrops.
               </Card.Body>
               <Card.Body>
                 
@@ -53,7 +62,7 @@ class Features extends Component {
 
       </Grid.Row>
 
-      </Container>
+      </>
     );
   }
 }

@@ -7,7 +7,7 @@ import { SocialNetworksList, Card, Button, Form, Container, Grid, Table } from "
 class TreasuryStatus extends Component {
   render() {
     return (
-      <Container>
+      <>
       <Grid.Row cards deck> 
 
         <Grid.Col>
@@ -61,7 +61,7 @@ class TreasuryStatus extends Component {
 
       </Grid.Row>
 
-      </Container>
+      </>
       
     );
   }
