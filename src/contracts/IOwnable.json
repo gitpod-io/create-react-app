@@ -1,0 +1,648 @@
+{
+  "contractName": "IOwnable",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Contract module which provides a basic access control mechanism, where there is an account (an owner) that can be granted exclusive access to specific functions.* By default, the owner account will be the one that deploys the contract. This can later be changed with {transferOwnership}. This module is used through inheritance. It will make available the modifier `onlyOwner`, which can be applied to your functions to restrict their use to the owner.\",\"kind\":\"dev\",\"methods\":{\"renounceOwnership()\":{\"details\":\"Returns the address of the current owner.\"},\"transferOwnership(address)\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/libraries/interfaces/IOwnable.sol\":\"IOwnable\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":1},\"remappings\":[]},\"sources\":{\"project:/contracts/libraries/interfaces/IOwnable.sol\":{\"keccak256\":\"0xd7d5b6db9ffe5b8da724854bc29f0d34e02beef6444714438331042dea2a8a0c\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://7daa8f4d961c65f0484355c5e1308c1f46947a6d7b02facec768206a8cc86c53\",\"dweb:/ipfs/QmT1pdYk3H3TrU3oYU2TLq6iAEMYNRpnW2T2JwY2Ar8RSy\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-3.0-or-later\npragma solidity >=0.4.22 <0.9.0;\n\n/** @dev Contract module which provides a basic access control mechanism, where there is an account (an owner) that can be granted exclusive access to specific functions.* By default, the owner account will be the one that deploys the contract. This can later be changed with {transferOwnership}. This module is used through inheritance. It will make available the modifier `onlyOwner`, which can be applied to your functions to restrict their use to the owner.*/\ninterface IOwnable {event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\n                    function owner() external view returns (address);                                /** @dev Returns the address of the current owner.*/\n                    function renounceOwnership() external;  /** @dev Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.*/\n                    function transferOwnership(address newOwner) external;  /** @dev Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner. */\n}",
+  "sourcePath": "G:\\roit\\backend\\contracts\\libraries\\interfaces\\IOwnable.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/libraries/interfaces/IOwnable.sol",
+    "exportedSymbols": {
+      "IOwnable": [
+        3633
+      ]
+    },
+    "id": 3634,
+    "license": "GPL-3.0-or-later",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3610,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "45:32:14"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IOwnable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 3611,
+          "nodeType": "StructuredDocumentation",
+          "src": "79:463:14",
+          "text": "@dev Contract module which provides a basic access control mechanism, where there is an account (an owner) that can be granted exclusive access to specific functions.* By default, the owner account will be the one that deploys the contract. This can later be changed with {transferOwnership}. This module is used through inheritance. It will make available the modifier `onlyOwner`, which can be applied to your functions to restrict their use to the owner."
+        },
+        "fullyImplemented": false,
+        "id": 3633,
+        "linearizedBaseContracts": [
+          3633
+        ],
+        "name": "IOwnable",
+        "nameLocation": "553:8:14",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 3617,
+            "name": "OwnershipTransferred",
+            "nameLocation": "569:20:14",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 3616,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3613,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "previousOwner",
+                  "nameLocation": "606:13:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3617,
+                  "src": "590:29:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3612,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "590:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3615,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "newOwner",
+                  "nameLocation": "637:8:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3617,
+                  "src": "621:24:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3614,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "621:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "589:57:14"
+            },
+            "src": "563:84:14"
+          },
+          {
+            "functionSelector": "8da5cb5b",
+            "id": 3622,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "owner",
+            "nameLocation": "677:5:14",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3618,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "682:2:14"
+            },
+            "returnParameters": {
+              "id": 3621,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3620,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "708:7:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3619,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "708:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "707:9:14"
+            },
+            "scope": 3633,
+            "src": "668:49:14",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 3623,
+              "nodeType": "StructuredDocumentation",
+              "src": "749:52:14",
+              "text": "@dev Returns the address of the current owner."
+            },
+            "functionSelector": "715018a6",
+            "id": 3626,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "renounceOwnership",
+            "nameLocation": "831:17:14",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3624,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "848:2:14"
+            },
+            "returnParameters": {
+              "id": 3625,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "859:0:14"
+            },
+            "scope": 3633,
+            "src": "822:38:14",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 3627,
+              "nodeType": "StructuredDocumentation",
+              "src": "862:290:14",
+              "text": "@dev Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+            },
+            "functionSelector": "f2fde38b",
+            "id": 3632,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferOwnership",
+            "nameLocation": "1182:17:14",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3630,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3629,
+                  "mutability": "mutable",
+                  "name": "newOwner",
+                  "nameLocation": "1208:8:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3632,
+                  "src": "1200:16:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3628,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1200:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1199:18:14"
+            },
+            "returnParameters": {
+              "id": 3631,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1226:0:14"
+            },
+            "scope": 3633,
+            "src": "1173:54:14",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3634,
+        "src": "543:807:14",
+        "usedErrors": []
+      }
+    ],
+    "src": "45:1305:14"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/libraries/interfaces/IOwnable.sol",
+    "exportedSymbols": {
+      "IOwnable": [
+        3633
+      ]
+    },
+    "id": 3634,
+    "license": "GPL-3.0-or-later",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3610,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "45:32:14"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IOwnable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 3611,
+          "nodeType": "StructuredDocumentation",
+          "src": "79:463:14",
+          "text": "@dev Contract module which provides a basic access control mechanism, where there is an account (an owner) that can be granted exclusive access to specific functions.* By default, the owner account will be the one that deploys the contract. This can later be changed with {transferOwnership}. This module is used through inheritance. It will make available the modifier `onlyOwner`, which can be applied to your functions to restrict their use to the owner."
+        },
+        "fullyImplemented": false,
+        "id": 3633,
+        "linearizedBaseContracts": [
+          3633
+        ],
+        "name": "IOwnable",
+        "nameLocation": "553:8:14",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 3617,
+            "name": "OwnershipTransferred",
+            "nameLocation": "569:20:14",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 3616,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3613,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "previousOwner",
+                  "nameLocation": "606:13:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3617,
+                  "src": "590:29:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3612,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "590:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3615,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "newOwner",
+                  "nameLocation": "637:8:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3617,
+                  "src": "621:24:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3614,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "621:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "589:57:14"
+            },
+            "src": "563:84:14"
+          },
+          {
+            "functionSelector": "8da5cb5b",
+            "id": 3622,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "owner",
+            "nameLocation": "677:5:14",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3618,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "682:2:14"
+            },
+            "returnParameters": {
+              "id": 3621,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3620,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "708:7:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3619,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "708:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "707:9:14"
+            },
+            "scope": 3633,
+            "src": "668:49:14",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 3623,
+              "nodeType": "StructuredDocumentation",
+              "src": "749:52:14",
+              "text": "@dev Returns the address of the current owner."
+            },
+            "functionSelector": "715018a6",
+            "id": 3626,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "renounceOwnership",
+            "nameLocation": "831:17:14",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3624,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "848:2:14"
+            },
+            "returnParameters": {
+              "id": 3625,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "859:0:14"
+            },
+            "scope": 3633,
+            "src": "822:38:14",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 3627,
+              "nodeType": "StructuredDocumentation",
+              "src": "862:290:14",
+              "text": "@dev Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+            },
+            "functionSelector": "f2fde38b",
+            "id": 3632,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferOwnership",
+            "nameLocation": "1182:17:14",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3630,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3629,
+                  "mutability": "mutable",
+                  "name": "newOwner",
+                  "nameLocation": "1208:8:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3632,
+                  "src": "1200:16:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3628,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1200:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1199:18:14"
+            },
+            "returnParameters": {
+              "id": 3631,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1226:0:14"
+            },
+            "scope": 3633,
+            "src": "1173:54:14",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3634,
+        "src": "543:807:14",
+        "usedErrors": []
+      }
+    ],
+    "src": "45:1305:14"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-02-10T20:26:31.021Z",
+  "devdoc": {
+    "details": "Contract module which provides a basic access control mechanism, where there is an account (an owner) that can be granted exclusive access to specific functions.* By default, the owner account will be the one that deploys the contract. This can later be changed with {transferOwnership}. This module is used through inheritance. It will make available the modifier `onlyOwner`, which can be applied to your functions to restrict their use to the owner.",
+    "kind": "dev",
+    "methods": {
+      "renounceOwnership()": {
+        "details": "Returns the address of the current owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

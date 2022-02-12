@@ -1,11 +1,24 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
+import getContracts from '../ethereumConnection/ethereumConnection';
 
 import "tabler-react/dist/Tabler.css";
 
-import { SocialNetworksList, Card, Button, Form, Container, Grid, Table } from "tabler-react";
+import { SocialNetworksList, Card, Grid, Table } from "tabler-react";
 
-class TreasuryStatus extends Component {
-  render() {
+function TreasuryStatus() {
+  const [stableIncomeSystem, setStableIncomeSystem] = useState(undefined);
+  const [totalSupply, setTotalSupply] = useState(undefined);
+
+  useEffect(() => {
+    const init = async () => {
+      const { stableIncomeSystem, rOIToken } = await getContracts();
+      const totalSupply = await stableIncomeSystem.totalSupply();
+      setStableIncomeSystem(stableIncomeSystem);
+      setTotalSupply(totalSupply);
+    };
+    init();
+  }, []);
+
     return (
       <>
       <Grid.Row cards deck> 
@@ -65,6 +78,5 @@ class TreasuryStatus extends Component {
       </>
       
     );
-  }
 }
 export default TreasuryStatus;
